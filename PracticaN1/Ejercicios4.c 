@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    float km, metros;
+    printf("Ingrese un numero: ");
+    scanf("%f", &km);
+    
+    metros=km*1000;
+    printf("\n%.2f km = %.2f metros", km, metros);
+    
+    return 0;
+}
