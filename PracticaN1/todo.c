@@ -154,3 +154,27 @@ int main() {
     return 0;
 }
 
+9.
+#include<stdio.h>
+#include<stdlib.h>
+#include <string.h>
+
+int main()
+{
+    char c1, c2, c3, car;
+    printf("Ingrese tres caracteres: ");
+    scanf("%c %c %c", &c1, &c2, &c3);
+    
+    if(c1 > c2) {
+     car = c1;
+     c1 = c2;
+     c2 = car;
+    }
+    if(c2 > c3) {
+      car = c2;
+      c2 = c3;
+      c3 = car;
+    }
+    printf("\nLetras ordenadas: %c %c %c", c1, c2, c3);
+    return 0;
+}
