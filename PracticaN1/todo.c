@@ -381,3 +381,42 @@ int main()
 
     return 0;
 }
+
+/*15. Construir un programa que ingrese un carácter y determine si es una vocal.*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    char letra;
+    printf("Ingrese un caracter: ");
+    scanf("%c", &letra);
+
+    switch(letra) {
+    case 'A':
+    case 'a':
+        printf("Es una Vocal. ");
+        break;
+    case 'E':
+    case 'e':
+        printf("Es una Vocal. ");
+        break;
+    case 'I':
+    case 'i':
+        printf("Es una Vocal. ");
+        break;
+    case 'O':
+    case 'o':
+        printf("Es una Vocal. ");
+        break;
+    case 'U':
+    case 'u':
+        printf("Es una Vocal. ");
+        break;
+    default:
+        printf("Es una consonante. ");
+        break;
+    }
+    return 0;
+}
