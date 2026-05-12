@@ -222,3 +222,44 @@ int main() {
     printf("\nEl resultado de la operaciónes: %d", total);
     return 0;
 }
+
+/*11. Desarrollar un algoritmo que ingrese nombre y nota entera (entre 1 y 10) de un alumno
+correspondiente al promedio obtenido, se pide mostrar el siguiente mensaje: "Juan
+obtuve un sobresaliente", según el promedio: 10-Sobresaliente, 8 y 9-Distinguido, 6 y
+7-Bueno, 4 y 5-Aprobado, 1,2,3-Reprobado.*/
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int nota;
+    char nombre[20];
+    printf("Ingrese su nombre: ");
+    scanf("%s", nombre);
+    printf("Ingrese su nota: ");
+    scanf("%d", &nota);
+    
+    switch(nota) {
+          case 10:
+          printf("%s obtuvo un Sobresaliente", nombre);
+          break;
+          case 9:
+          case 8:
+          printf("%s obtuvo un Distingido", nombre);
+          break;
+          case 7:
+          case 6:
+          printf("%s obtuvo una Buena nota", nombre);
+          break;
+          case 5:
+          case 4:
+          printf("%s Aprobó",  nombre);
+          break;          
+          default:
+          printf("%s Reprobó", nombre);
+          break;
+    }
+    return 0;
+}
