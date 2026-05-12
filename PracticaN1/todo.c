@@ -263,3 +263,49 @@ int main()
     }
     return 0;
 }
+
+/*12. Desarrollar un algoritmo que ingrese nombre y fecha de nacimiento como tres enteros
+(DD, MM, AAAA), de una persona y mostrar por pantalla su nombre y su fecha de
+nacimiento , de la siguiente forma "Carlos nació el 5 de marzo de 1973".*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    char nombre[20];
+    int dia, mes, anio;
+    printf("Ingrese su nombre: ");
+    scanf("%s", nombre);
+    printf("Ingrese dia de nacimiento: ");
+    scanf("%d", &dia);
+    printf("Ingrese mes de nacimiento: ");
+    scanf("%d", &mes);
+    printf("Ingrese año de nacimiento: ");
+    scanf("%d", &anio);
+    
+    if ((mes < 1 || mes > 12) || (dia < 1 || dia > 31)) {
+        printf("Error: La fecha %d/%d no es valida.\n", dia, mes);
+        return 1;
+    }
+    
+    printf("%s nació el %d de ", nombre, dia);
+    
+    switch (mes) {
+        case 1:  printf("enero"); break;
+        case 2:  printf("febrero"); break;
+        case 3:  printf("marzo"); break;
+        case 4:  printf("abril"); break;
+        case 5:  printf("mayo"); break;
+        case 6:  printf("junio"); break;
+        case 7:  printf("julio"); break;
+        case 8:  printf("agosto"); break;
+        case 9:  printf("septiembre"); break;
+        case 10: printf("octubre"); break;
+        case 11: printf("noviembre"); break;
+        case 12: printf("diciembre"); break;
+    }
+    
+    printf(" del año %d", anio);
+    return 0;
+}
