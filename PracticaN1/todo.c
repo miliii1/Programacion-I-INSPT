@@ -178,3 +178,47 @@ int main()
     printf("\nLetras ordenadas: %c %c %c", c1, c2, c3);
     return 0;
 }
+
+/* 10. Desarrollar un algoritmo que ingrese dos números y luego un carácter que indique una
+operación (S-Suma, R-Resta, M-Multiplicación, D-División) y luego realice la operación
+correspondiente, teniendo en cuenta que no se pueden realizar divisiones por cero.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    int num, num2, total;
+    char letra;
+    printf("Ingrese el primer numero: ");
+    scanf("%d", &num);
+    printf("Ingrese el segundo numero: ");
+    scanf("%d", &num2);
+    printf("Ingrese la operación: (S=suma, R=Resta, M=multiplicacion, D=Division): ");
+    scanf("%sc", &letra);
+    
+    switch(letra) {
+          case 'S':
+          case 's':
+              total = num + num2;
+          break;
+          case 'R':
+          case 'r':
+              total = num - num2;
+          break;
+          case 'M':
+          case 'm':
+              total = num*num2;
+          break;
+          case 'D':
+          case 'd':
+          if(num2 == 0) printf("No se puede realizar la division por 0.");
+          else total = num/num2;
+          break;
+          default:
+              printf("\nIngrese una operación válida.");
+    }
+          
+    printf("\nEl resultado de la operaciónes: %d", total);
+    return 0;
+}
