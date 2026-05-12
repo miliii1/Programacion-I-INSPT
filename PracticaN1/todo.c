@@ -337,3 +337,47 @@ int main()
     }
     return 0;
 }
+
+14. 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+int main()
+{
+    int x;
+    float num;
+    printf("Ingrese un numero: ");
+    scanf("%f", &num);
+    printf("(1) EL TRIPLE\n");
+    printf("(2) EL CUADRADO\n");
+    printf("(3) LOGARITMO NATURAL\n");
+    printf("(4) LOGARITMO DECIMAL\n");
+    printf(" Escribe el número de la opción que desees: \n");
+    scanf("%d",&x);
+
+
+    switch(x) {
+    case 1:
+        printf("El triple es: %.0f", num*num*num);
+        break;
+    case 2:
+        printf("El cuadrado es: %.0f", num*num);
+        break;
+    case 3:
+        double result = log(num);
+        printf("El LOGARITMO NATURAL es %.2f", result);
+        break;
+    case 4:
+        double resultado = log10(num);
+        printf("El LOGARITMO DECIMAL es %.2f", resultado);
+        break;
+    default:
+        printf("Ingrese numeros válidos. ");
+        break;
+    }
+
+    return 0;
+}
