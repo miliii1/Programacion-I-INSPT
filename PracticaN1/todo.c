@@ -128,6 +128,29 @@ printf("\n%d", unidad);
 return 0;
 }
 
- 12. Determina la hipotenusa de un triángulo rectángulo conocidas las longitudes de sus 
- dos catetos (tener en cuenta librería math.h). 
+ 8. 
+/*8. Una compañía dedicada a servicio de mensajería realiza envios al interior el costo fijo de traslado es de $1500 si es corta distancia y 2000 si es larga distancia, luego dependerá
+del peso de la mercadería enviada, los de corta distancia si el peso supera los 20 kilos se le cobran $800 por cada kilo de exceso y los de larga distancia se le cobra $800,cada 5
+kilos excedidos. Desarrollar un algoritmo que ingrese el tipo de viaje y la cantidad de kilos y me devuelva el costo del viaje.*/
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main() {
+    int viaje, peso, totalCor, totalLar;
+    printf("Ingrese el tipo de viaje (1=corta distancia / 2=larga distancia): ");
+    scanf("%d", &viaje);
+    printf("Ingrese el peso en kilos: ");
+    scanf("%d", &peso);
+    totalCor = (1500) + (peso - 20) * 800;
+    totalLar = 2000 + ((peso - 20) / 5)*800;
+    if(viaje == 1) {
+        if(peso >= 20) printf("Costo de viaje: $%d ", totalCor);
+        else printf("Costo de viaje: $%d ", 1500);
+    } else {
+        if(peso >= 20) printf("Costo de viaje: $%d", totalLar);
+        else printf("Costo de viaje: $%d", 2000);
+    }
+    return 0;
+}
 
