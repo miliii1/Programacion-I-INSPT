@@ -309,3 +309,31 @@ int main()
     printf(" del año %d", anio);
     return 0;
 }
+
+/*13. Desarrolle un algoritmo que ingrese los valores de los lados de un triángulo. Valide si
+las medidas pueden formar un triángulo y luego indique a través de un mensaje que
+tipo de triángulo es (EQUILÁTERO, ISÓSCELES, O ESCALENO).
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int ladoA, ladoB, ladoC;
+    printf("Ingrese lado A: ");
+    scanf("%d", &ladoA);
+    printf("Ingrese lado B: ");
+    scanf("%d", &ladoB);
+    printf("Ingrese lado C: ");
+    scanf("%d", &ladoC);
+    
+    if(ladoA + ladoB > ladoC && ladoA + ladoC > ladoB && ladoB + ladoC > ladoA) {
+    if(ladoA == ladoB && ladoB == ladoC) printf("Los lados forman un EQUILATERO. ");
+    else if(ladoA == ladoB || ladoB == ladoC || ladoA == ladoC) printf("Los lados forman un ISOSCELES.  ");
+    else printf("ESCALENO. ");
+    } else {
+          printf("Error debe ingresar numeros válido. ");
+    }
+    return 0;
+}
