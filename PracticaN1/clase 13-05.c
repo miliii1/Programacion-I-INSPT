@@ -48,3 +48,23 @@ int main(){
 
     return 0;
 }
+
+//Ingresar la edad de una persona, indicar si es menor o mayor, USANDO TRUE FALSE (BOOL) QUE REMPLAZA IF (?, :)
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(){
+    int edad;
+    bool mayor,joven;
+
+
+    printf("Ingrese la edad de la persona:");
+    scanf ("%d", &edad);
+    (edad>18)?printf("Es mayor"):printf("Es menor"); //edad es mayor a 18? si, true. Sino (:) false.
+    
+
+
+
+    return 0;
+}
