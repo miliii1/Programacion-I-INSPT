@@ -181,7 +181,8 @@ int main()
 
 /* 10. Desarrollar un algoritmo que ingrese dos números y luego un carácter que indique una
 operación (S-Suma, R-Resta, M-Multiplicación, D-División) y luego realice la operación
-correspondiente, teniendo en cuenta que no se pueden realizar divisiones por cero.*/
+correspondiente, teniendo en cuenta que no se pueden realizar divisiones por cero.
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -195,7 +196,7 @@ int main() {
     printf("Ingrese el segundo numero: ");
     scanf("%d", &num2);
     printf("Ingrese la operación: (S=suma, R=Resta, M=multiplicacion, D=Division): ");
-    scanf("%sc", &letra);
+    scanf(" %c", &letra);
     
     switch(letra) {
           case 'S':
