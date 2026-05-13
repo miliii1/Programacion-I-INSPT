@@ -25,3 +25,26 @@ int main() {
     
 
 }
+
+//Ingresar la edad de una persona, indicar si es menor o mayor, 
+
+#include <stdio.h>
+int main(){
+    int edad,mayor,joven;
+
+    printf("Ingrese la edad de la persona:");
+    scanf ("%d", &edad);
+    mayor=(edad>18);
+    joven=(edad>=15)&&(edad<=18);
+    
+    if (mayor)//if(mayor!=0)//if (mayor!=false)
+        printf("Es adulto");
+    else 
+        if (joven) 
+            printf("Es adolescente");
+    else
+        printf("Es chiquito");
+
+
+    return 0;
+}
