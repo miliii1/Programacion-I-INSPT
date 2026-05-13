@@ -101,7 +101,7 @@ int main(){
     scanf ("%d", &a);
     printf("Ingrese un numero ");
     scanf ("%d", &b);
-    printf("La respuesta es: %d", (a>b)?(res=a+b):(res=a-b);
+    printf("La respuesta es: %d", (a>b)?(res=a+b):(res=a-b));
 
 
 
