@@ -107,3 +107,86 @@ int main(){
 
     return 0;
 } 
+
+
+// Ciclos:
+//Sentencia definida (for): Se conocen la cantidad de veces que se va a repetir el ciclo. Sintaxis o forma general de un ciclo for:
+//Si el ciclo esta bien definido usar for
+
+#include <stdio.h>
+int main (){
+
+        for(int i=1;i<=10;i++)//digo que se va a incrementar uno en cada vuelta.//puedo definir la variable dentro del for.
+        {
+            printf(" %d",i);//i es la variable que esta en el ciclo for
+
+        }
+
+
+
+
+    return 0;
+
+    //DEsarrollar un algoritmo que ingrese 20 numeros enteros. Y muestre por pantalla un pantalla en for 
+//y calcule cantidad de positivos y negativos. 
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+        int num, pos=0, neg=0;
+        for(int i=0;i<20;i++) {
+            printf("Ingrese 20 numero: ");
+            scanf("%d", &num);
+
+              num > 0 ? pos++ : neg++;
+
+        }
+      
+        printf("Se encuentran %d positivos y %d negativos", pos, neg);
+        return 0;
+    }
+
+    }
+//Ingresar la edad de una persona, indicar si es menor o mayor, 
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(){
+    int a,b,res;
+
+    printf("Ingrese un numero ");
+    scanf ("%d", &a);
+    printf("Ingrese un numero ");
+    scanf ("%d", &b);
+    printf("La respuesta es:%d", (a>b)?(res=a+b):(res=a-b));
+
+
+
+    return 0;
+} 
+
+//Otro ejemplo de ciclos
+
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(){
+    int i,j;
+
+    for (i=0, j=10; i<5 && j>5; i++,j--) // 
+    {
+        printf("i = %d, j = %d\n", i, j);
+
+    }
+    return 0;
+} 
+
+
+
