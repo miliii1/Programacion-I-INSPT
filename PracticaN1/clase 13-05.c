@@ -49,7 +49,9 @@ int main(){
     return 0;
 }
 
-//Ingresar la edad de una persona, indicar si es menor o mayor, USANDO TRUE FALSE (BOOL) QUE REMPLAZA IF (?, :)
+//Ingresar la edad de una persona, indicar si es menor o mayor, USANDO TRUE FALSE (BOOL) QUE REMPLAZA IF (?, :) CONDICIONAL INLINE
+//El ? introduce una condicion. Siempre tiene que haber dos posibilidades, no puede haber mas de una. 
+
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -68,3 +70,40 @@ int main(){
 
     return 0;
 }
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(){
+    int a,b,res;
+
+    printf("Ingrese un numero ");
+    scanf ("%d", &a);
+    printf("Ingrese un numero ");
+    scanf ("%d", &b);
+    (a>b)?(res=a+b):(res=a-b);
+    printf("La respueata es: %d", res);
+
+
+
+    return 0;
+} 
+
+
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(){
+    int a,b,res;
+
+    printf("Ingrese un numero ");
+    scanf ("%d", &a);
+    printf("Ingrese un numero ");
+    scanf ("%d", &b);
+    printf("La respuesta es: %d", (a>b)?(res=a+b):(res=a-b);
+
+
+
+    return 0;
+} 
