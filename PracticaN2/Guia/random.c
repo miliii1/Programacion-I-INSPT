@@ -33,3 +33,21 @@ int main() {
     }
     return 0;
 }
+// eje 12
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num1, num2, i;
+    printf("Ingrese el primer numero: ");
+    scanf("%d", &num1);
+    printf("Ingrese el segundo numero: ");
+    scanf("%d", &num2);
+
+    if(num1 < num2) {
+        for(i = num1; i < num2+1; i++) {
+            printf("%d\n", i);
+        }
+    }
+    return 0;
+}
