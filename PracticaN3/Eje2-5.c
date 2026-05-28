@@ -1,4 +1,4 @@
-// 2.Desarrollar un algoritmo que escriba por pantalla los primeros 100 números naturales.
+// 2.Desarrollar un algoritmo que escriba por pantalla los primeros 100 nÃºmeros naturales.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,7 +14,7 @@ int main() {
 }
 */
 
-// 3. Desarrollar un algoritmo que ingrese 10 números enteros y muestre por pantalla un mensaje únicamente cuando son positivos.
+// 3. Desarrollar un algoritmo que ingrese 10 nÃºmeros enteros y muestre por pantalla un mensaje Ãºnicamente cuando son positivos.
 
 /*
 int main() {
@@ -31,7 +31,7 @@ int main() {
 }
 */
 
-//4. Desarrollar un algoritmo que, ingrese un número entero entre 0 y 10 (validar este valor) y muestre por pantalla la tabla de multiplicar del número ingresado.
+//4. Desarrollar un algoritmo que, ingrese un nÃºmero entero entre 0 y 10 (validar este valor) y muestre por pantalla la tabla de multiplicar del nÃºmero ingresado.
 
 /*
 int main() {
@@ -51,7 +51,7 @@ int main() {
 }
 */
 
-// 5. Desarrollar un algoritmo que ingrese números hasta ingresar un número negativo, se pide mostrar por pantalla el promedio.
+// 5. Desarrollar un algoritmo que ingrese nÃºmeros hasta ingresar un nÃºmero negativo, se pide mostrar por pantalla el promedio.
 
 /*
 int main() {
@@ -75,8 +75,7 @@ int main() {
     return 0;
 }
 */
-
-
+//
 
 
 
