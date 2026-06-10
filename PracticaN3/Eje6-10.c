@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// 6. Desarrollar un algoritmo que ingrese números hasta leer un cero, calcular y mostrar por pantalla cuántos de ellos son negativos y cuántos son positivos.
+// 6. Desarrollar un algoritmo que ingrese nÃºmeros hasta leer un cero, calcular y mostrar por pantalla cuÃ¡ntos de ellos son negativos y cuÃ¡ntos son positivos.
 
 /*
 int main() {
@@ -51,7 +51,7 @@ int main() {
 */
 
 
-// 8. Desarrollar un algoritmo que ingrese un número entero positivo y muestre por pantalla todos sus divisores.
+// 8. Desarrollar un algoritmo que ingrese un nÃºmero entero positivo y muestre por pantalla todos sus divisores.
 
 /*
 int main() {
@@ -71,14 +71,16 @@ int main() {
 
 int main() {
 
-    int num, i = 0;
+    int num, i = 0, sum=0, cifra;
     printf("Ingrese un numero entero positivo: ");
     scanf("%d", &num);
 
-    while(num != 0) {
-
+    while(num > 0) {
+        cifra = num % 10;
+        sum+=cifra;
+        num = num / 10;
+        i++;
     }
-
+    printf("La suma de sus cifras es: %d", sum);
     return 0;
 }
-
