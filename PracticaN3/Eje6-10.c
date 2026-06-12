@@ -68,19 +68,30 @@ int main() {
 */
 
 //9. Desarrollar un algoritmo que ingrese un entero positivo, y muestre por pantalla la suma de sus cifras.
+/*
+int main()
+{
 
-int main() {
+    int num, i = 1, suma = 0, cifra;
 
-    int num, i = 0, sum=0, cifra;
-    printf("Ingrese un numero entero positivo: ");
-    scanf("%d", &num);
 
-    while(num > 0) {
-        cifra = num % 10;
-        sum+=cifra;
+    do
+    {
+        printf("Ingrese un numero entero positivo: ");
+        scanf("%d", &num);
+        if(num < 0) printf("Error! Ingrese un numero valido. ");
+    } while(num < 0);
+
+    while(num > 0)
+    {
+        cifra = (num % 10);
         num = num / 10;
+        suma+=cifra;
         i++;
     }
-    printf("La suma de sus cifras es: %d", sum);
+
+    printf("La suma de sus cifras es: %d", suma);
+
     return 0;
 }
+*/
