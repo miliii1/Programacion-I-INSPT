@@ -95,3 +95,26 @@ int main()
     return 0;
 }
 */
+
+/// 10. Desarrollar un algoritmo que ingresa un número entero mayor o igual cero (validar) y luego muestre por pantalla el factorial del mismo
+/*
+int main() {
+
+    int num, factorial, i;
+
+    do {
+        printf("Ingrese un numero entero: ");
+        scanf("%d", &num);
+
+        if(num < 0) printf("Error: numero invalido. ");
+    } while(num < 0);
+
+    factorial = num;
+    for(i = num - 1; i >= 1; i--) {
+        factorial = factorial * i;
+        printf("%d x ", i + 1);
+    }
+    printf("1 = %d", factorial);
+    return 0;
+}
+*/
