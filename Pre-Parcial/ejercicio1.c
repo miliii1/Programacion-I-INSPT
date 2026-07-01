@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void maximo(int*, int);
+void maximo(int*, int*);
 
 int numCaja, numSeccion, importe, cantProdu, max;
 int descuento, descuentoTotal = 0, contComprobante = 0, recaudacionTotal = 0;
@@ -41,13 +41,16 @@ int main()
 
     } while (operar != 'N' && operar != 'n');
 
+    maximo(importe, numCaja);
     
     printf("Cantidad de comprobantes emitidos en cada caja: %d\n", contComprobante);
     printf("Recaudacion total: $%d", recaudacionTotal);
+    printf("La caja con mayor importe es: ", maximo);
     return 0;
 }
 
-void maximo(int *importeMax, int cajaMax) {
+void maximo(int *importeMax, int *cajaMax) {
     int importeMax = importe;
+    
     
 }
