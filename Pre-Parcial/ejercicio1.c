@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void maximo(int*, int*);
+void maximo(float importe, int cajaNum, int *importeMax, int *cajaMax);
 
 int numCaja, numSeccion, importe, cantProdu, max;
 int descuento, descuentoTotal = 0, contComprobante = 0, recaudacionTotal = 0;
@@ -49,8 +49,10 @@ int main()
     return 0;
 }
 
-void maximo(int *importeMax, int *cajaMax) {
+void maximo(float importe, int cajaNum, int *importeMax, int *cajaMax) {
     int importeMax = importe;
-    
+    if(*importeMax > importe) {
+        
+    }
     
 }
