@@ -1,0 +1,113 @@
+SubProceso crearMision(idMision Por Referencia, tipoEmergencia Por Referencia, provincia Por Referencia, localidad Por Referencia, descripcion Por Referencia, nivel Por Referencia, cant Por Entero)
+	Definir opcTipo, opcNivel Como Entero
+	Definir confirmacion Como Cadena
+	
+	// Generación explícita del ID guardado en memoria
+	Si cant < 10 Entonces
+		idMision[cant] <- "M0" + ConvertirATexto(cant)
+	SiNo
+		idMision[cant] <- "M" + ConvertirATexto(cant)
+	FinSi
+
+	Escribir "--- CREAR NUEVA MISIÓN (ID: ", idMision[cant], ") ---"
+	Escribir "Tipo de emergencia: [1] Inundación  [2] Tormenta  [3] Incendio  [4] Otro"
+	Leer opcTipo
+	Segun opcTipo Hacer
+		1: tipoEmergencia[cant] <- "Inundación"
+		2: tipoEmergencia[cant] <- "Tormenta"
+		3: tipoEmergencia[cant] <- "Incendio Forestal"
+		De Otro Modo: tipoEmergencia[cant] <- "Otro"
+	FinSegun
+	
+	Escribir "Provincia / Zona: "
+	Leer provincia[cant]
+	
+	Escribir "Localidad / Área: "
+	Leer localidad[cant]
+	
+	Escribir "Descripción detallada: "
+	Leer descripcion[cant]
+	
+	Escribir "Nivel de urgencia: [1] BAJA   [2] MEDIA   [3] ALTA "
+	Leer opcNivel
+	Segun opcNivel Hacer
+		1: nivel[cant] <- "BAJA"
+		2: nivel[cant] <- "MEDIA"
+		3: nivel[cant] <- "ALTA"
+		De Otro Modo: nivel[cant] <- "NO DEFINIDA"
+	FinSegun
+	
+	// Vista previa con la variable de ID real
+	Escribir ""
+	Escribir "=== VISTA PREVIA DE LA MISIÓN ==="
+	Escribir "ID asignado: ", idMision[cant]
+	Escribir "Tipo: ", tipoEmergencia[cant], " | Urgencia: ", nivel[cant]
+	Escribir "Ubicación: ", provincia[cant], " - ", localidad[cant]
+	Escribir "Descripción: ", descripcion[cant]
+	Escribir "----------------------------------"
+	Escribir "¿Confirmar creación de la misión? (S/N): "
+	Leer confirmacion
+	
+	Si Mayusculas(confirmacion) = "S" Entonces
+		Escribir "¡MISIÓN CREADA EXITOSAMENTE! ID guardado: ", idMision[cant]
+	Sino
+		Escribir "Operación cancelada."
+		// Limpieza de datos si el usuario arrepiente la carga
+		idMision[cant] <- ""
+		tipoEmergencia[cant] <- ""
+		provincia[cant] <- ""
+		localidad[cant] <- ""
+		descripcion[cant] <- ""
+		nivel[cant] <- ""
+	FinSi
+FinSubProceso
+
+Algoritmo coordinador
+	// Arreglo explícito para IDs
+	Dimension idMision[20], tipoEmergencia[20], provincia[20], localidad[20], descripcion[20], nivel[20]
+	
+	Definir opcion, cantMisiones Como Entero
+	cantMisiones <- 1
+	
+	Repetir
+		Escribir ""
+		Escribir "================ PANEL DE COORDINADOR ================"
+		Escribir "[1] Crear misión"
+		Escribir "[2] Ver Misiones Activas"
+		Escribir "[3] Asignar trabajadores"
+		Escribir "[4] Ver Stock"
+		Escribir "[5] Cerrar Sesión"
+		Escribir "------------------------------------------------------"
+		Escribir "Seleccione una opción: "
+		Leer opcion
+		
+		Segun opcion Hacer
+			1:
+				Si cantMisiones <= 20 Entonces
+					crearMision(idMision, tipoEmergencia, provincia, localidad, descripcion, nivel, cantMisiones)
+					Si idMision[cantMisiones] <> "" Entonces
+						cantMisiones <- cantMisiones + 1
+					FinSi
+				SiNo
+					Escribir "Límite máximo de misiones alcanzado (20/20)."
+				FinSi
+			2:
+				Escribir "--- MISIONES ACTIVAS ---"
+				Si cantMisiones = 1 Entonces
+					Escribir "No hay misiones registradas."
+				SiNo
+					Para i <- 1 Hasta cantMisiones - 1 Hacer
+						Escribir "ID: ", idMision[i], " | ", tipoEmergencia[i], " | ", provincia[i], " - ", localidad[i], " | Urgencia: ", nivel[i]
+					FinPara
+				FinSi
+			3:
+				Escribir "Módulo: Asignar trabajadores (En desarrollo)"
+			4:
+				Escribir "Módulo: Ver Stock (En desarrollo)"
+			5:
+				Escribir "Cerrando sesión del sistema..."
+			De Otro Modo:
+				Escribir "Opción incorrecta."
+		FinSegun
+	Hasta Que opcion = 5
+FinAlgoritmo
