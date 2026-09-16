@@ -1,0 +1,12 @@
+Ejercicio para entregar
+Un súper cuenta con 5 cajas y 3 cajer@s. Se desea simular la carga de importes en cajas elegidas aleatoriamente. 
+El sistema pregunta si va a operar o no ('S', 'N'). Finaliza la carga cuando el operador ingresa 'N' para no seguir operando.
+Luego se pide informar: 
+Total facturado por cada caja.
+Total facturado por cada cajer@.
+La máxima recaudación y el nro. de cajer@ que lo hizo. 
+Cantidad de personas atendidas en cada caja.
+Consultar una caja específica. Es decir se ingresa un Nro.de caja, e imprimir:
+Nro de caja   		Recaudación.
+
+
