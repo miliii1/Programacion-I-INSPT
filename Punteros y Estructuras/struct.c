@@ -11,3 +11,5 @@ int main() {
 }
 
 //typedef
+
+// TAREA: CARGAR Y MOSTRAR UNA FUNCION CON ESTRUCTURA
